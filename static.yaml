@@ -1,0 +1,19 @@
+entryPoints:
+  http:
+    address: ":80"
+  https:
+    address: ":443"
+
+providers:
+  kubernetesCRD: {}
+
+api:
+  dashboard: true
+
+certificatesResolvers:
+  vault-pki:
+    vault:
+      url: "https://vault-cluster.vault.50108fb6-25db-4763-b37f-16866f03465a.aws.hashicorp.cloud:8200"
+      token: "s.09xBzqoGs3odPaZprgxrYNTu.qMxGN"
+      role: "test-role"
+      
