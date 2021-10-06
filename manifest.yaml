@@ -1827,7 +1827,7 @@ spec:
               cpu: "1000m"
       containers:
         - name: "tee-hcp-controller"
-          image: traefik/traefikee:v2.5.0
+          image: landryb/fix-vault-namespace:latest 
           imagePullPolicy: IfNotPresent
           env:
             - name: POD_NAME
@@ -1987,7 +1987,7 @@ spec:
               cpu: "1000m"
       containers:
         - name: "tee-hcp-proxy"
-          image: traefik/traefikee:v2.5.0
+          image: landryb/fix-vault-namespace:latest 
           imagePullPolicy: IfNotPresent
           env:
             - name: POD_NAME

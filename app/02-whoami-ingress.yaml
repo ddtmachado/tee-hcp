@@ -1,0 +1,20 @@
+---
+
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: whoamiv1
+  namespace: app
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - kind: Rule
+      match: Host(`foo.hcp.demo.traefiklabs.tech`)
+      services:
+        - kind: Service
+          name: whoamiv1
+          namespace: app
+          port: 80
+  tls:
+    certResolver: mypki 
